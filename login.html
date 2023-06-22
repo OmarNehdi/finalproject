@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Tech</title>
+    <link rel="icon" href="images/dd-removebg-preview (1).png">
+    <style>
+        .login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  margin: 20px auto;
+  transform: translate(-50%, -55%);
+  background: rgba(0,0,0,.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px
+}
+
+.login-box a:hover {
+  background: #fff;
+  color: #272727;
+  border-radius: 5px;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.login-box p:last-child {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.login-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+.login-box:hover .logo{
+    margin: top 10px;;
+    display: flex;
+    transition: 2s;
+    cursor: pointer;
+
+}
+.login-box:hover{
+    box-shadow: 10px 5px 5px yellow;
+    transition: 1s;
+}
+.logint{
+    display: flex;
+}
+.login-box:hover .logint{
+    display: none;
+
+}
+.logo{
+display: none;
+cursor: pointer;
+}
+body{
+    background-image: url(bg.jpg);
+    background-size: 100%;
+}
+.form {
+  margin-top: 100px;
+  width: 290px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: .4s ease-in-out;
+}
+
+.form:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  scale: 0.99;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  color: black;
+  top: 3em;
+  font-weight: bold;
+}
+
+.check {
+  position: relative;
+  align-self: center;
+  top: 4em;
+}
+
+.input {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(235, 235, 235);
+  box-shadow: inset 3px 3px 6px #d1d1d1,
+            inset -3px -3px 6px #ffffff;
+  top: 6.5em;
+  left: 1.5em;
+  padding-left: 15px;
+  transition: .4s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.input:focus {
+  box-shadow: inset 0px 0px 0px #d1d1d1,
+            inset 0px 0px 0px #ffffff;
+  background-color: lightgrey;
+}
+
+.btn1 {
+  position: relative;
+  top: 8.5em;
+  left: 2.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  box-shadow: 1px 1px 3px #b5b5b5,
+             -1px -1px 3px #ffffff;
+}
+
+.btn1:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}
+.logo{
+  width: 40%;
+  margin-bottom: 100px;
+  border-radius: 30Px;
+}
+
+.btn2 {
+  position: relative;
+  top: 9.5em;
+  left: 2.4em;
+  width: 17em;
+  height: 3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  box-shadow: 1px 1px 3px #b5b5b5,
+             -1px -1px 3px #ffffff;
+}
+
+.btn2:active {
+  box-shadow: inset 3px 3px 6px #b5b5b5,
+            inset -3px -3px 6px #ffffff;
+}
+.logo:hover{
+  box-shadow: 10px 5px 5px red;
+  transition: 1s;
+  margin-left: 30%;
+
+}
+    </style>
+</head>
+<body>
+  
+    <div class="login-box">
+        <p class="logint">Login</p>
+     <img class="logo" src="tesla-logo.png">
+
+        <form>
+          <div class="user-box">
+            <input id="email"class="area" required="" name="" type="text">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input id="password" class="area"required="" name="" type="password">
+            <label>Password</label>
+          </div>
+          <a href="index.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+      <script> document.addEventListener("DOMContentLoaded", function() {
+        var submitButton = document.querySelector(".login-box a");
+        var areaInputs = document.querySelectorAll(".area");
+      
+        submitButton.addEventListener("click", function(event) {
+          var isEmpty = false;
+      
+          areaInputs.forEach(function(input) {
+            if (input.value === "") {
+              isEmpty = true;
+            }
+          });
+      
+          if (isEmpty) {
+            event.preventDefault();
+            alert("🛑 ⛔️Put Your Informations🛑 ⛔️");
+          }
+        });
+      });</script>
+      <script>
+
+window.onload = function() {
+  // Disable the return page functionality
+  history.replaceState(null, null, document.URL);
+  
+  // Listen for the user trying to navigate back
+  window.addEventListener('popstate', function(event) {
+    history.replaceState(null, null, document.URL);
+  });
+};
+
+
+
+      </script>
+      <script>
+        function checkCredentials() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+      
+          if (email === "aziz" && password === "admin") {
+            alert("Welcome admin aziz");
+          }
+        }
+      </script>
+      
+ 
+      
+</body>
+</html>
